@@ -7,3 +7,18 @@ let usuario: {nome: string, idade: number} = {
 }
 
 console.log(usuario)
+
+let funcionario: {
+  supervisores: string[],
+  baterPonto: (horas: number) => string,
+} = {
+  supervisores: ['Ana', 'Fernando'],
+  baterPonto(horario: number): string {
+    if(horario <= 8) {
+      return 'Ponto normal'
+    } else {
+      return 'Fora do horário'
+    }
+  }
+
+}
